@@ -32,7 +32,7 @@ prediction = classifier.predict(X_test)
 from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(y_test, prediction)
 
-accuracy = (cm[0][0] + cm[1][1]) / 4
+accuracy = (cm[0][0] + cm[1][1]) / (cm[0][0]+cm[1][0]+cm[1][1]+cm[0][1])
 print('Positive reviews: Correctly classified {} and failed {}'.format(cm[1][1],cm[0][1]))
 print('Negative reviews: Correctly classified {} and failed {}'.format(cm[0][0],cm[1][0]))
 print('Accuracy is {}%'.format(accuracy))
