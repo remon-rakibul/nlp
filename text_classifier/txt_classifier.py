@@ -1,6 +1,8 @@
 from sklearn.datasets import load_files
 from nltk.corpus import stopwords
+import nltk
 import re
+nltk.download('stopwords')
 
 reviews = load_files('txt_sentoken/')
 X, y = reviews.data, reviews.target
