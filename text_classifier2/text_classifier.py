@@ -19,7 +19,7 @@ with open('X.pickle', 'rb') as f:
     X = pickle.load(f)
 with open('y.pickle', 'rb') as f:
     y = pickle.load(f)
-    
+  
 corpus = []
 
 for i in range(len(X)):
